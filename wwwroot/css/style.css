@@ -1,0 +1,33 @@
+div.container {
+  padding: 0% 15%;
+}
+
+@media screen and (max-width: 1023px) {
+  .navbar-menu {
+    box-shadow: none;
+  }
+
+  .navbar-menu.is-active {
+    border-top: 1px solid #ababab17;
+  }
+}
+
+@media screen and (max-width: 700px) {
+  div.container {
+    padding: 0% 2%;
+  }
+}
+
+.list-chaine {
+  display: grid;
+  grid-template-columns: repeat(4, auto);
+  grid-gap: 0.5em;
+}
+
+div.table-responsive {
+  overflow-x: scroll;
+}
+
+div.table-responsive::-webkit-scrollbar {
+  display: none;
+}

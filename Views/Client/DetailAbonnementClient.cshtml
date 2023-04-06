@@ -1,0 +1,128 @@
+@{
+    ViewData["Title"] = "Detail abonnement client";
+}
+
+<div>
+    <h1 class="title">@ViewBag.client.nomclient</h1>
+    <h1 class="subtitle">@ViewBag.client.nomregion avec signal @ViewBag.client.signal</h1>
+    <div class="table-responsive">
+        <table class="table is-fullwidth">
+            <thead>
+                <tr>
+                    <th>Nom bouquet</th>
+                    <th>Date debut</th>
+                    <th>Date fin</th>
+                    <th>Reduction</th>
+                    <th>Montant</th>
+                </tr>
+            </thead>
+            <tbody>   
+            @foreach (var abonnementclient in @ViewBag.listac) {
+                <tr>
+                    <td>@abonnementclient.nombouquet</td>
+                    <td>@abonnementclient.datedebut</td>
+                    <td>@abonnementclient.datefin</td>
+                    <td>@abonnementclient.reduction%</td>
+                    <td>@abonnementclient.montant Ar</td>
+                </tr>
+            }
+            </tbody>
+        </table>
+    </div>
+    <div class="is-flex is-justify-content-space-between" style="margin-top: 3em;">
+        <div>
+            <a href="/Client/ListClient" class="button has-background-light is-light" >Retour</a>
+        </div>
+        <div class="buttons is-grouped">
+            <button class="button is-link is-light js-modal-trigger" data-target="modal-reserver">Reserver</button>
+            <button class="button is-warning is-light js-modal-trigger" data-target="modal-personnaliser">Personnaliser</button>
+        </div>
+    </div>
+    <br />
+    <br />
+    <h1 class="title">Bouquets personnalisés</h1>
+    @if (@ViewBag.bouquetperso.Count == 0) {
+        <h1 class="subtitle pt-5 pb-1">Aucun bouquet</h1>
+    } else {
+        <div class="table-responsive">
+            <table class="table is-fullwidth">
+                <thead>
+                    <tr>
+                        <th>Nom bouquet</th>
+                        <th>Montant</th>
+                    </tr>
+                </thead>
+                <tbody>   
+                @foreach (var lbp in @ViewBag.bouquetperso) {
+                    <tr>
+                        <td>@lbp.nom</td>
+                        <td>@lbp.montantsansremise Ar</td>
+                    </tr>
+                }
+                </tbody>
+            </table>
+        </div>
+    }
+
+    <div id="modal-reserver" class="modal">
+        <div class="modal-background"></div>
+
+        <div class="modal-content">
+            <div class="box">
+                <h1 class="title">Reserver</h1>
+                @if(@ViewBag.bouquetdispo.Count == 0) {
+                    <h1 class="subtitle pt-5 pb-1">Aucun bouquet disponible</h1>
+                } else {
+                    <form action="/Client/Reserver" method="post">
+                        <div class="field">
+                            <label class="label">Bouquets disponibles</label>
+                            <div class="control">
+                                <div class="select is-fullwidth">
+                                <select name="nombouquet">
+                                    @foreach(var bouquetdispo in @ViewBag.bouquetdispo) {
+                                        <option value="@bouquetdispo.id">@bouquetdispo.nom</option>
+                                    }
+                                </select>
+                                </div>
+                            </div>
+                            <input type="hidden" name="idclient" value="@ViewBag.client.idclient">
+                        </div>
+                        <button type="submit" class="button is-info">Reserver</button>
+                    </form>
+                }
+            </div>
+        </div>
+        <button class="modal-close is-large" aria-label="close"></button>
+    </div>
+
+    <div id="modal-personnaliser" class="modal">
+        <div class="modal-background"></div>
+
+        <div class="modal-content">
+            <div class="box">
+                <h1 class="title">Personnaliser</h1>
+                <form action="/Client/Personnaliser" method="post">
+                    <div class="field">
+                        <label class="label">Nom bouquet</label>
+                        <div class="control">
+                            <input type="text" class="input" placeholder="Nom bouquet" name="nombouquet">
+                        </div>
+                    </div>
+                    <label class="label">Chaines disponible</label>
+                    <div class="block list-chaine">
+                        @foreach (var chainedispo in @ViewBag.chainedispo) {
+                            <div>
+                                <input type="checkbox" name="nomchaine" value="@chainedispo.id">
+                                <label class="subtitle">@chainedispo.nom</label>
+                            </div>
+                        }
+                    </div>
+                    <input type="hidden" name="idclient" value="@ViewBag.client.idclient">
+                    <button type="submit" class="button is-info">Ajouter</button>
+                </form>
+            </div>
+        </div>
+        <button class="modal-close is-large" aria-label="close"></button>
+    </div>
+
+</div>

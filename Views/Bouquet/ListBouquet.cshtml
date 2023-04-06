@@ -1,0 +1,31 @@
+@{
+    ViewData["Title"] = "Liste des bouquets";
+}
+
+<div>
+    <h1 class="title">Liste des bouquets</h1>
+    <div class="table-responsive">
+        <table class="table is-fullwidth">
+            <thead>
+                <tr>
+                    <th>id</th>
+                    <th>Nom</th>
+                    <th>Reduction</th>
+                    <th>Montant sans remise</th>
+                    <th>Montant avec remise</th>
+                </tr>
+            </thead>
+            <tbody>   
+            @foreach (var db in @ViewBag.alldetailbouquet) {
+                <tr>
+                    <td>@db.id</td>
+                    <td>@db.nom</td>
+                    <td>@db.reduction%</td>
+                    <td>@db.montantsansremise Ar</td>
+                    <td>@db.montantavecremise Ar</td>
+                </tr>
+            }
+            </tbody>
+        </table>
+    </div>
+</div>

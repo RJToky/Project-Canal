@@ -1,0 +1,31 @@
+@{
+    ViewData["Title"] = "Liste des clients";
+}
+
+<div>
+    <h1 class="title">Liste des clients</h1>
+    <div class="table-responsive">
+        <table class="table is-fullwidth">
+            <thead>
+                <tr>
+                    <th>id</th>
+                    <th>Nom</th>
+                    <th>Region</th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody>   
+            @foreach (var client in @ViewBag.listc) {
+                <tr>
+                    <td>@client.idclient</td>
+                    <td>@client.nomclient</td>
+                    <td>@client.nomregion</td>
+                    <td>
+                        <a href="/Client/DetailAbonnementClient?idclient=@client.idclient" class="button is-pulled-right is-link is-light">Voir</a>
+                    </td>
+                </tr>
+            }
+            </tbody>
+        </table>
+    </div>
+</div>

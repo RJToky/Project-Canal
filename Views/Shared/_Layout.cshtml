@@ -1,0 +1,41 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"]</title>
+    <link rel="stylesheet" href="~/lib/bulma/bulma.min.css" />
+    <link rel="stylesheet" href="~/css/style.css" />
+    <script src="~/js/bulma.js" defer></script>
+</head>
+<body>
+    <header class="box" style="padding: 0%;">
+        <nav class="navbar container" role="navigation" aria-label="main navigation">
+            <div class="navbar-brand">
+                <a class="navbar-item title" style="margin-bottom: 0%;">
+                    Canal
+                </a>
+                <a role="button" class="navbar-burger" style="height: initial;" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
+                    <span aria-hidden="true"></span>
+                    <span aria-hidden="true"></span>
+                    <span aria-hidden="true"></span>
+                </a>
+            </div>
+
+            <div id="navbarBasicExample" class="navbar-menu">
+                <div class="navbar-end">
+                    <a href="/Client/ListClient" class="navbar-item has-text-info has-text-weight-bold">Clients</a>
+                    <a href="/Bouquet/ListBouquet" class="navbar-item has-text-info has-text-weight-bold">Bouquets</a>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <div class="container">
+        <main role="main">
+            @RenderBody()
+        </main>
+    </div>
+    @await RenderSectionAsync("Scripts", required: false)
+</body>
+</html>
