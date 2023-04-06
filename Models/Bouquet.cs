@@ -34,11 +34,11 @@ public class Bouquet {
         }
     }
 
-    public static List<Bouquet> FindAll(SqlConnection? con) {
+    public static List<Bouquet> FindAllWithPerso(SqlConnection? con, int idclient) {
         try {
             List<Bouquet> allBouquet = new List<Bouquet>();
             
-            string sql = "select * from bouquet where idclient is null";
+            string sql = "select * from bouquet where idclient is null or idclient = " + idclient;
             using(SqlCommand command = new SqlCommand(sql, con)) {
                 using(SqlDataReader reader = command.ExecuteReader()) {
                     while (reader.Read()) {

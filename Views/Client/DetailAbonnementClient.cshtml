@@ -20,8 +20,8 @@
             @foreach (var abonnementclient in @ViewBag.listac) {
                 <tr>
                     <td>@abonnementclient.nombouquet</td>
-                    <td>@abonnementclient.datedebut</td>
-                    <td>@abonnementclient.datefin</td>
+                    <td>@abonnementclient.datedebut.ToString().Split(" ")[0]</td>
+                    <td>@abonnementclient.datefin.ToString().Split(" ")[0]</td>
                     <td>@abonnementclient.reduction%</td>
                     <td>@abonnementclient.montant Ar</td>
                 </tr>
@@ -78,7 +78,7 @@
                             <label class="label">Bouquets disponibles</label>
                             <div class="control">
                                 <div class="select is-fullwidth">
-                                <select name="nombouquet">
+                                <select name="idbouquet">
                                     @foreach(var bouquetdispo in @ViewBag.bouquetdispo) {
                                         <option value="@bouquetdispo.id">@bouquetdispo.nom</option>
                                     }
@@ -112,7 +112,7 @@
                     <div class="block list-chaine">
                         @foreach (var chainedispo in @ViewBag.chainedispo) {
                             <div>
-                                <input type="checkbox" name="nomchaine" value="@chainedispo.id">
+                                <input type="checkbox" name="idchaine" value="@chainedispo.id">
                                 <label class="subtitle">@chainedispo.nom</label>
                             </div>
                         }

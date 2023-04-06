@@ -62,7 +62,7 @@ public class Client {
             con?.Open();
             
             DetailClient dc = Canal.Models.DetailClient.FindOne(con, idclient);
-            List<Bouquet> allBouquet = Canal.Models.Bouquet.FindAll(con);
+            List<Bouquet> allBouquet = Canal.Models.Bouquet.FindAllWithPerso(con, idclient);
             AbonnementClient lastAbonnement = Canal.Models.AbonnementClient.FindLastByIdclient(con, idclient);
 
             for (int i = 0; i < allBouquet.Count; i++) {

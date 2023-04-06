@@ -8,8 +8,8 @@ public class AbonnementClient {
     public int idbouquet { get; set; }
     public string nombouquet { get; set; }
     public double reduction { get; set; }
-    public string datedebut { get; set; }
-    public string datefin { get; set; }
+    public DateTime datedebut { get; set; }
+    public DateTime datefin { get; set; }
     public double montant { get; set; }
 
     public static List<AbonnementClient> FindByIdclient(int idclient) {
@@ -28,8 +28,8 @@ public class AbonnementClient {
                         ac.idbouquet = reader.GetInt32(2);
                         ac.nombouquet = reader.GetString(3);
                         ac.reduction = reader.GetDouble(4);
-                        ac.datedebut = reader.GetDateTime(5).ToString();
-                        ac.datefin = reader.GetDateTime(6).ToString();
+                        ac.datedebut = reader.GetDateTime(5);
+                        ac.datefin = reader.GetDateTime(6);
                         ac.montant = reader.GetDouble(7);
                         listac.Add(ac);
                     }
@@ -55,8 +55,8 @@ public class AbonnementClient {
                         ac.idbouquet = reader.GetInt32(2);
                         ac.nombouquet = reader.GetString(3);
                         ac.reduction = reader.GetDouble(4);
-                        ac.datedebut = reader.GetDateTime(5).ToString();
-                        ac.datefin = reader.GetDateTime(6).ToString();
+                        ac.datedebut = reader.GetDateTime(5);
+                        ac.datefin = reader.GetDateTime(6);
                         ac.montant = reader.GetDouble(7);
                     }
                 }

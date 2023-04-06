@@ -28,13 +28,17 @@ public class ClientController : Controller {
 
     [HttpPost]
     public IActionResult Reserver(IFormCollection form) {
+        int idbouquet = int.Parse(form["idbouquet"]);
+        int idclient = int.Parse(form["idclient"]);
+        Canal.Models.Abonnement.Insert(idclient, idbouquet);
+
         return RedirectToAction("DetailAbonnementClient", new {idclient = form["idclient"]});
     }
 
     [HttpPost]
     public IActionResult Personnaliser(IFormCollection form) {
         string nombouquet = form["nombouquet"];
-        string[] chaines = form["nomchaine"];
+        string[] chaines = form["idchaine"];
         int idclient = int.Parse(form["idclient"]);
         Canal.Models.Bouquet.InsertPersonnalise(nombouquet, chaines, idclient);
 
