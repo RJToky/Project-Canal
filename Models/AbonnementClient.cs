@@ -46,7 +46,7 @@ public class AbonnementClient {
         try {
             AbonnementClient ac = new AbonnementClient();
 
-            string sql = "select top 1 * from v_abonnement_client where idclient = " + idclient + " order by datefin desc";
+            string sql = "select top 1 * from v_abonnement_client where idclient = " + idclient + " and datefin >= GETDATE() order by datefin desc";
             using(SqlCommand command = new SqlCommand(sql, con)) {
                 using(SqlDataReader reader = command.ExecuteReader()) {
                     while (reader.Read()) {

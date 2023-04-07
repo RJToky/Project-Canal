@@ -13,14 +13,12 @@ create table region (
     nom varchar(20) not null,
     signal double precision not null
 );
-go
 
 create table client (
     id int identity(1, 1) primary key,
     nom varchar(20) not null,
     idregion int references region(id)
 );
-go
 
 create table chaine (
     id int identity(1, 1) primary key,
@@ -28,7 +26,6 @@ create table chaine (
     prix double precision not null,
     signal double precision not null
 );
-go
 
 create table bouquet (
     id int identity(1, 1) primary key,
@@ -36,13 +33,11 @@ create table bouquet (
     reduction double precision,
     idclient int references client(id) -- Tompony raha personnalise
 );
-go
 
 create table bouquet_chaine (
     idbouquet int references bouquet(id),
     idchaine int references chaine(id)
 );
-go
 
 create table abonnement (
     id int identity(1, 1) primary key,
@@ -51,6 +46,7 @@ create table abonnement (
     datedebut date not null,
     datefin date
 );
+
 go
 
 -- Lister tables

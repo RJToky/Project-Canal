@@ -5,6 +5,7 @@ create or alter view v_detail_client as (
     from client c
     join region r on c.idregion = r.id
 );
+go
 
 create or alter view v_detail_bouquet_chaine as (
     select
@@ -14,6 +15,7 @@ create or alter view v_detail_bouquet_chaine as (
     join bouquet b on bc.idbouquet = b.id
     join chaine c on bc.idchaine = c.id
 );
+go
 
 create or alter view v_abonnement_client as (
     select
@@ -27,6 +29,7 @@ create or alter view v_abonnement_client as (
     join v_detail_bouquet_chaine vdbc on b.id = vdbc.idbouquet
     group by c.id, c.nom, b.id, b.nom, b.reduction, a.datedebut, a.datefin
 );
+go
 
 create or alter view v_detail_bouquet as (
     select
@@ -37,3 +40,4 @@ create or alter view v_detail_bouquet as (
     join v_detail_bouquet_chaine vdbc on b.id = vdbc.idbouquet
     group by b.id, b.nom, b.reduction, b.idclient
 );
+go
