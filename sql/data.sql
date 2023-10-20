@@ -8,9 +8,9 @@ go
 
 insert into client values
     ('John Smith', 1),
-    ('Alice Jones', 1),
-    ('Bob Johnson', 4),
-    ('Jane Davis', 3)
+    ('Alice Jones', 2),
+    ('Bob Johnson', 3),
+    ('Jane Davis', 4)
 ;
 go
 
@@ -67,5 +67,14 @@ insert into abonnement values
     (3, 3, '2023-04-20', '2023-05-20'),
     (4, 4, '2023-08-11', '2023-09-11'),
     (4, 2, '2023-03-12', '2023-04-12')
+;
+go
+
+insert into reduction values
+    (6, 2),
+    (7, 4),
+    (8, 6),
+    (9, 8),
+    (10, 10)
 ;
 go

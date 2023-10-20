@@ -24,10 +24,11 @@ insert into region values
 ;
 
 insert into client values
-    ('Safidy', 1),
+    ('Mirija', 1),
     ('Mendrika', 13),
-    ('Razafy', 2),
-    ('Malaza', 4)
+    ('Toky', 2),
+    ('Tahiry', 4),
+    ('Jeremie', 5)
 ;
 
 insert into chaine values
@@ -105,6 +106,14 @@ insert into bouquet_chaine values
     (7, 10),
     (7, 11),
     (7, 12)
+;
+
+insert into reduction values
+    (6, 2),
+    (7, 4),
+    (8, 6),
+    (9, 8),
+    (10, 10)
 ;
 
 go

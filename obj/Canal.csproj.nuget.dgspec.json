@@ -10,21 +10,21 @@
         "projectUniqueName": "D:\\ITU\\S4\\Mr Tahina\\Canal\\Canal.csproj",
         "projectName": "Canal",
         "projectPath": "D:\\ITU\\S4\\Mr Tahina\\Canal\\Canal.csproj",
-        "packagesPath": "C:\\Users\\TOKY\\.nuget\\packages\\",
+        "packagesPath": "C:\\Users\\tokyr\\.nuget\\packages\\",
         "outputPath": "D:\\ITU\\S4\\Mr Tahina\\Canal\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\TOKY\\AppData\\Roaming\\NuGet\\NuGet.Config"
+          "C:\\Users\\tokyr\\AppData\\Roaming\\NuGet\\NuGet.Config"
         ],
         "originalTargetFrameworks": [
-          "net6.0"
+          "net7.0"
         ],
         "sources": {
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
-          "net6.0": {
-            "targetAlias": "net6.0",
+          "net7.0": {
+            "targetAlias": "net7.0",
             "projectReferences": {}
           }
         },
@@ -35,8 +35,8 @@
         }
       },
       "frameworks": {
-        "net6.0": {
-          "targetAlias": "net6.0",
+        "net7.0": {
+          "targetAlias": "net7.0",
           "dependencies": {
             "System.Data.SqlClient": {
               "target": "Package",
@@ -62,7 +62,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.407\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.202\\RuntimeIdentifierGraph.json"
         }
       }
     }

@@ -72,7 +72,7 @@ public class Client {
                 List<Chaine> listc = Canal.Models.Chaine.FindChaineByIdbouqet(con, allBouquet[i].id);
                 for (int j = 0; j < listc.Count; j++) {
                     montant += listc[j].prix;
-                    if (!(listc[j].signal >= dc.signal)) {
+                    if (!(listc[j].signal <= dc.signal)) {
                         isDispo = false;
                         break;
                     }

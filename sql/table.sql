@@ -7,6 +7,7 @@ drop table bouquet;
 drop table chaine;
 drop table client;
 drop table region;
+drop table reduction;
 
 create table region (
     id int identity(1, 1) primary key,
@@ -45,6 +46,11 @@ create table abonnement (
     idbouquet int references bouquet(id),
     datedebut date not null,
     datefin date
+);
+
+create table reduction (
+    nbrchaine int unique,
+    valeur double precision
 );
 
 go

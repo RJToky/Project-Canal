@@ -16,7 +16,7 @@
                     <th>Montant</th>
                 </tr>
             </thead>
-            <tbody>   
+            <tbody>
             @foreach (var abonnementclient in @ViewBag.listac) {
                 <tr>
                     <td>@abonnementclient.nombouquet</td>
@@ -49,14 +49,18 @@
                 <thead>
                     <tr>
                         <th>Nom bouquet</th>
-                        <th>Montant</th>
+                        <th>Reduction</th>
+                        <th>Montant sans remise</th>
+                        <th>Montant avec remise</th>
                     </tr>
                 </thead>
                 <tbody>   
                 @foreach (var lbp in @ViewBag.bouquetperso) {
                     <tr>
                         <td>@lbp.nom</td>
+                        <td>@lbp.reduction%</td>
                         <td>@lbp.montantsansremise Ar</td>
+                        <td>@lbp.montantavecremise Ar</td>
                     </tr>
                 }
                 </tbody>
@@ -105,7 +109,7 @@
                     <div class="field">
                         <label class="label">Nom bouquet</label>
                         <div class="control">
-                            <input type="text" class="input" placeholder="Nom bouquet" name="nombouquet">
+                            <input type="text" class="input" placeholder="Nom bouquet" name="nombouquet" required>
                         </div>
                     </div>
                     <label class="label">Chaines disponible</label>

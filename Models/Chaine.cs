@@ -38,7 +38,7 @@ public class Chaine {
             SqlConnection con = Canal.Models.Connection.Connect();
             con?.Open();
 
-            string sql = "select c.* from chaine c where c.signal >= (select vdc.signal from v_detail_client vdc where vdc.idclient = " + idclient + ")";
+            string sql = "select c.* from chaine c where c.signal <= (select vdc.signal from v_detail_client vdc where vdc.idclient = " + idclient + ") order by nom asc";
             // string sql = "select * from chaine";
             using(SqlCommand command = new SqlCommand(sql, con)) {
                 using(SqlDataReader reader = command.ExecuteReader()) {

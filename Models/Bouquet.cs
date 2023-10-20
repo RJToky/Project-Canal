@@ -57,11 +57,12 @@ public class Bouquet {
         }
     }
 
-    public static void Insert(SqlConnection? con, string nombouquet, int idclient) {
+    public static void Insert(SqlConnection? con, string nombouquet, double reduction, int idclient) {
         try {
-            string sql = "insert into bouquet values (@nombouquet, 0.0, @idclient)";
+            string sql = "insert into bouquet values (@nombouquet, @reduction, @idclient)";
             using (SqlCommand command = new SqlCommand(sql, con)) {
                 command.Parameters.AddWithValue("@nombouquet", nombouquet);
+                command.Parameters.AddWithValue("@reduction", reduction);
                 command.Parameters.AddWithValue("@idclient", idclient);
                 command.ExecuteNonQuery();
             }
@@ -94,7 +95,8 @@ public class Bouquet {
             SqlConnection con = Canal.Models.Connection.Connect();
             con?.Open();
 
-            Bouquet.Insert(con, nombouquet, idclient);
+            double reduction = Canal.Models.Reduction.FindReduction(con, nomchaine.Length);
+            Bouquet.Insert(con, nombouquet, reduction, idclient);
             int lastid = Bouquet.GetLastId(con);
 
             for (int i = 0; i < nomchaine.Length; i++) {

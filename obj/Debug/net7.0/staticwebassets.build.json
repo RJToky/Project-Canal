@@ -1,0 +1,88 @@
+{
+  "Version": 1,
+  "Hash": "dPz6kYUPoXxpKJ6xggabIrT8D7k7Jo2yXb/gGqdmoUw=",
+  "Source": "Canal",
+  "BasePath": "_content/Canal",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [
+    {
+      "Name": "Canal\\wwwroot",
+      "Source": "Canal",
+      "ContentRoot": "D:\\ITU\\S4\\Mr Tahina\\Canal\\wwwroot\\",
+      "BasePath": "_content/Canal",
+      "Pattern": "**"
+    }
+  ],
+  "Assets": [
+    {
+      "Identity": "D:\\ITU\\S4\\Mr Tahina\\Canal\\wwwroot\\css\\style.css",
+      "SourceId": "Canal",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\ITU\\S4\\Mr Tahina\\Canal\\wwwroot\\",
+      "BasePath": "_content/Canal",
+      "RelativePath": "css/style.css",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\css\\style.css"
+    },
+    {
+      "Identity": "D:\\ITU\\S4\\Mr Tahina\\Canal\\wwwroot\\favicon.ico",
+      "SourceId": "Canal",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\ITU\\S4\\Mr Tahina\\Canal\\wwwroot\\",
+      "BasePath": "_content/Canal",
+      "RelativePath": "favicon.ico",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\favicon.ico"
+    },
+    {
+      "Identity": "D:\\ITU\\S4\\Mr Tahina\\Canal\\wwwroot\\js\\bulma.js",
+      "SourceId": "Canal",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\ITU\\S4\\Mr Tahina\\Canal\\wwwroot\\",
+      "BasePath": "_content/Canal",
+      "RelativePath": "js/bulma.js",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\js\\bulma.js"
+    },
+    {
+      "Identity": "D:\\ITU\\S4\\Mr Tahina\\Canal\\wwwroot\\lib\\bulma\\bulma.min.css",
+      "SourceId": "Canal",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\ITU\\S4\\Mr Tahina\\Canal\\wwwroot\\",
+      "BasePath": "_content/Canal",
+      "RelativePath": "lib/bulma/bulma.min.css",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\lib\\bulma\\bulma.min.css"
+    }
+  ]
+}

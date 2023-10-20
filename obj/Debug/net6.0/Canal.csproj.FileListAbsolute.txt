@@ -29,3 +29,8 @@ D:\ITU\S4\Mr Tahina\Canal\obj\Debug\net6.0\refint\Canal.dll
 D:\ITU\S4\Mr Tahina\Canal\obj\Debug\net6.0\Canal.pdb
 D:\ITU\S4\Mr Tahina\Canal\obj\Debug\net6.0\Canal.genruntimeconfig.cache
 D:\ITU\S4\Mr Tahina\Canal\obj\Debug\net6.0\ref\Canal.dll
+D:\ITU\S4\Mr Tahina\Canal\obj\Debug\net6.0\staticwebassets\msbuild.Canal.Microsoft.AspNetCore.StaticWebAssets.props
+D:\ITU\S4\Mr Tahina\Canal\obj\Debug\net6.0\staticwebassets\msbuild.build.Canal.props
+D:\ITU\S4\Mr Tahina\Canal\obj\Debug\net6.0\staticwebassets\msbuild.buildMultiTargeting.Canal.props
+D:\ITU\S4\Mr Tahina\Canal\obj\Debug\net6.0\staticwebassets\msbuild.buildTransitive.Canal.props
+D:\ITU\S4\Mr Tahina\Canal\obj\Debug\net6.0\staticwebassets.pack.json
